@@ -55,16 +55,36 @@ table {
 
 html, body {
     height: 100%;
+
 }
 
 @backgroundMain: black;
 @width: 100%;
 @height: 100px;
 @color: white;
+@navcolor: lightblue;
 
-.image(){
-
+.image{
+	color: green;
 }
+
+.smallimage {
+	height: @height;
+	width: @height*1.5;
+	margin: 10px;
+}
+
+.boxcontent {
+	display: flex;
+	height: 300px;
+	width: 50%;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: 1px solid white;
+	color: @color;
+}
+
+
 
 
 
@@ -72,24 +92,47 @@ html {
 	background: @backgroundMain
 }
 
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+
+	a {
+		display: flex;
+		padding: 10px;
+		flex-direction: column;
+		width: 100%;
+		color: @navcolor;
+		text-decoration: none;
+		justify-content: space-between;
+		.image();
+	}
+}
+
+
 .container {
 	display: flex;
 	width: @width;
-
 	color: @color;
+	font-size: 62.5%;
+	font-family: 'Racing Sans One'; font-size: 22px;
 		h1 {
 			justify-content: center;
 			align-content: center;
 			margin-left: 600px;
-
 			height: 20px;
 			font-size: 48pt;
-		}
+			@media (max-width: 500px) {
+				display: none;
+			}
+
+			}
 		.imageMain {
 			display: flex;
 			width: @width;
 			justify-content: center;
 			margin-top: 5%;
+
 		}
 		img {
 			display: flex;
@@ -99,43 +142,37 @@ html {
 			width: 500px;
 			height: 300px;
 			margin-left: -800px;
+			@media (max-width: 500px) {
+				margin: auto;
+			}
 		}
 }
 
 .about {
 	display: flex;
-
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
 	color: @color;
 	height: 300px;
+	font-size: 1.3rem;
 
 	.left{
-		display: flex;
-		height: 300px;
-		width: 50%;
-		justify-content: center;
-		flex-wrap: wrap;
-		border: 1px solid white;
-		color: @color;
+		.boxcontent();
+		@media (max-width: 500px) {
+			font-size: 0.8rem;
+		}
 
 	}
 
 	.right{
-		display: flex;
-		height: 300px;
-		width: 50%;
-		justify-content: center;
-		align-content: center;
-		flex-wrap: nowrap;
-		border: 1px solid white;
-
-		color: @color;
+	.boxcontent();
 
 		h1{
-			margin-left: 80px;
-			color: @color
+			margin-left: 100px;
+			color: @color;
+			font-size: 1.3rem;
+
 		}
 
 	}
@@ -151,16 +188,25 @@ html {
 		justify-content: center;
 		align-content: space-between;
 		margin-top: 25px;
-		margin-left: -100px;
+		margin-left: -350px;
 		.small-left {
-			height: @height;
-			width: @height*1.5;
-			margin: 10px;
+			.smallimage();
+			@media (max-width: 500px) {
+				display: none;
+			}
 			}
 		.small-right {
-			height: @height;
-			width: @height*1.5;
-			margin: 10px;
+			.smallimage();
+			@media (max-width: 500px) {
+				display: flex;
+				flex-direction: : row;
+				flex-wrap: nowrap;
+				height: 80px;
+				width: 80px;
+				margin-left: 150px;
+				margin-top: -60px;
+
+			}
 
 			}
 	}
@@ -174,15 +220,24 @@ html {
 	color: @color;
 	justify-content: center;
 	margin-left: -250px;
+
+	@media (max-width: 500px) {
+		height: 400px;
+		width: 400px;
+		margin-left: 2px;
+	}
 	h1 {
 		font-weight: bold;
 		margin-left: 50%;
 		color: @color;
+		font-size: 1rem;
 	}
 	table {
 		border: 3px solid black;
 		width: 100%;
 		display: flex;
+
+
 
 		th {
 			border: 3px solid red;

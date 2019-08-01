@@ -134,13 +134,48 @@ html,
 body {
   height: 100%;
 }
+.image {
+  color: green;
+}
+.smallimage {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+}
+.boxcontent {
+  display: flex;
+  height: 300px;
+  width: 50%;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  color: white;
+}
 html {
   background: black;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav a {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  width: 100%;
+  color: lightblue;
+  text-decoration: none;
+  justify-content: space-between;
+  color: green;
 }
 .container {
   display: flex;
   width: 100%;
   color: white;
+  font-size: 62.5%;
+  font-family: 'Racing Sans One';
+  font-size: 22px;
 }
 .container h1 {
   justify-content: center;
@@ -148,6 +183,11 @@ html {
   margin-left: 600px;
   height: 20px;
   font-size: 48pt;
+}
+@media (max-width: 500px) {
+  .container h1 {
+    display: none;
+  }
 }
 .container .imageMain {
   display: flex;
@@ -164,6 +204,11 @@ html {
   height: 300px;
   margin-left: -800px;
 }
+@media (max-width: 500px) {
+  .container img {
+    margin: auto;
+  }
+}
 .about {
   display: flex;
   flex-direction: row;
@@ -171,6 +216,7 @@ html {
   justify-content: center;
   color: white;
   height: 300px;
+  font-size: 1.3rem;
 }
 .about .left {
   display: flex;
@@ -181,19 +227,24 @@ html {
   border: 1px solid white;
   color: white;
 }
+@media (max-width: 500px) {
+  .about .left {
+    font-size: 0.8rem;
+  }
+}
 .about .right {
   display: flex;
   height: 300px;
   width: 50%;
   justify-content: center;
-  align-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   border: 1px solid white;
   color: white;
 }
 .about .right h1 {
-  margin-left: 80px;
+  margin-left: 100px;
   color: white;
+  font-size: 1.3rem;
 }
 .about .enemies {
   display: flex;
@@ -204,17 +255,33 @@ html {
   justify-content: center;
   align-content: space-between;
   margin-top: 25px;
-  margin-left: -100px;
+  margin-left: -350px;
 }
 .about .enemies .small-left {
   height: 100px;
   width: 150px;
   margin: 10px;
 }
+@media (max-width: 500px) {
+  .about .enemies .small-left {
+    display: none;
+  }
+}
 .about .enemies .small-right {
   height: 100px;
   width: 150px;
   margin: 10px;
+}
+@media (max-width: 500px) {
+  .about .enemies .small-right {
+    display: flex;
+    flex-direction: : row;
+    flex-wrap: nowrap;
+    height: 80px;
+    width: 80px;
+    margin-left: 150px;
+    margin-top: -60px;
+  }
 }
 .history {
   display: flex;
@@ -224,10 +291,18 @@ html {
   justify-content: center;
   margin-left: -250px;
 }
+@media (max-width: 500px) {
+  .history {
+    height: 400px;
+    width: 400px;
+    margin-left: 2px;
+  }
+}
 .history h1 {
   font-weight: bold;
   margin-left: 50%;
   color: white;
+  font-size: 1rem;
 }
 .history table {
   border: 3px solid black;
