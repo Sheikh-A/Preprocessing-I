@@ -153,6 +153,7 @@ body {
 }
 html {
   background: black;
+  font-family: 'Lacquer', sans-serif;
 }
 nav {
   display: flex;
@@ -174,8 +175,6 @@ nav a {
   width: 100%;
   color: white;
   font-size: 62.5%;
-  font-family: 'Racing Sans One';
-  font-size: 22px;
 }
 .container h1 {
   justify-content: center;
@@ -226,6 +225,10 @@ nav a {
   flex-wrap: wrap;
   border: 1px solid white;
   color: white;
+}
+.about .left p {
+  font-family: 'Lacquer', sans-serif;
+  font-size: 1.2rem;
 }
 @media (max-width: 500px) {
   .about .left {
