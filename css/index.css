@@ -134,6 +134,15 @@ html,
 body {
   height: 100%;
 }
+.bg {
+  /* The image used */
+  background-image: url("https://cdn.shopify.com/s/files/1/0558/2081/products/Batman_Returns_FC_1024x1024.jpg?v=1541685585");
+  /* Full height */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .image {
   color: green;
 }
@@ -159,6 +168,7 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  background: black;
 }
 nav a {
   display: flex;

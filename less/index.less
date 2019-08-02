@@ -55,8 +55,20 @@ table {
 
 html, body {
     height: 100%;
+		}
 
-}
+		.bg {
+		  /* The image used */
+		  background-image: url("https://cdn.shopify.com/s/files/1/0558/2081/products/Batman_Returns_FC_1024x1024.jpg?v=1541685585");
+
+		  /* Full height */
+		  height: 100%;
+
+		  // /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
 
 @backgroundMain: black;
 @width: 100%;
@@ -97,6 +109,7 @@ nav {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	background: black;
 
 	a {
 		display: flex;
