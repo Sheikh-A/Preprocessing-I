@@ -1,1 +1,347 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+.bg {
+  /* The image used */
+  background-image: url("https://cdn.shopify.com/s/files/1/0558/2081/products/Batman_Returns_FC_1024x1024.jpg?v=1541685585");
+  /* Full height */
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.image {
+  color: green;
+}
+.smallimage {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+}
+.boxcontent {
+  display: flex;
+  height: 300px;
+  width: 50%;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  color: white;
+}
+html {
+  background: black;
+  font-family: 'Lacquer', sans-serif;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: black;
+}
+nav a {
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  width: 100%;
+  color: lightblue;
+  text-decoration: none;
+  justify-content: space-between;
+  color: green;
+}
+.container {
+  display: flex;
+  width: 100%;
+  color: white;
+  font-size: 62.5%;
+}
+.container h1 {
+  justify-content: center;
+  align-content: center;
+  margin-left: 600px;
+  height: 20px;
+  font-size: 48pt;
+}
+@media (max-width: 500px) {
+  .container h1 {
+    display: none;
+  }
+}
+.container .imageMain {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5%;
+}
+.container img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  width: 500px;
+  height: 300px;
+  margin-left: -800px;
+}
+@media (max-width: 500px) {
+  .container img {
+    margin: auto;
+  }
+}
+.about {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  height: 300px;
+  font-size: 1.3rem;
+}
+.about .left {
+  display: flex;
+  height: 300px;
+  width: 50%;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  color: white;
+}
+.about .left p {
+  font-family: 'Lacquer', sans-serif;
+  font-size: 1.2rem;
+}
+@media (max-width: 500px) {
+  .about .left {
+    font-size: 0.8rem;
+  }
+}
+.about .right {
+  display: flex;
+  height: 300px;
+  width: 50%;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 1px solid white;
+  color: white;
+}
+.about .right h1 {
+  margin-left: 100px;
+  color: white;
+  font-size: 1.3rem;
+}
+.about .enemies {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  height: 150px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between;
+  margin-top: 25px;
+  margin-left: -350px;
+}
+.about .enemies .small-left {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+}
+@media (max-width: 500px) {
+  .about .enemies .small-left {
+    display: none;
+  }
+}
+.about .enemies .small-right {
+  height: 100px;
+  width: 150px;
+  margin: 10px;
+}
+@media (max-width: 500px) {
+  .about .enemies .small-right {
+    display: flex;
+    flex-direction: : row;
+    flex-wrap: nowrap;
+    height: 80px;
+    width: 80px;
+    margin-left: 150px;
+    margin-top: -60px;
+  }
+}
+.history {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  color: white;
+  justify-content: center;
+  margin-left: -250px;
+}
+@media (max-width: 500px) {
+  .history {
+    height: 400px;
+    width: 400px;
+    margin-left: 2px;
+  }
+}
+.history h1 {
+  font-weight: bold;
+  margin-left: 50%;
+  color: white;
+  font-size: 1rem;
+}
+.history table {
+  border: 3px solid black;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 150px;
+}
+.history table th {
+  border: 3px solid red;
+  width: 300px;
+  font-weight: bold;
+  color: #696969;
+}
+.history table td {
+  border: 3px solid green;
+  color: #696969;
+}
+table#t01 {
+  width: 100%;
+  background-color: #bfbf8f;
+}
+.contact {
+  color: white;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}

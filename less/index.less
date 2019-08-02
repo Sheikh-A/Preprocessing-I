@@ -1,5 +1,5 @@
 // Is this working?
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -13,8 +13,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -25,7 +25,7 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -55,5 +55,233 @@ table {
 
 html, body {
     height: 100%;
+		}
+
+		.bg {
+		  /* The image used */
+		  background-image: url("https://cdn.shopify.com/s/files/1/0558/2081/products/Batman_Returns_FC_1024x1024.jpg?v=1541685585");
+
+		  /* Full height */
+		  height: 100%;
+
+		  // /* Center and scale the image nicely */
+		  background-position: center;
+		  background-repeat: no-repeat;
+		  background-size: cover;
+		}
+
+@backgroundMain: black;
+@width: 100%;
+@height: 100px;
+@color: white;
+@navcolor: lightblue;
+
+.image{
+	color: green;
 }
 
+.smallimage {
+	height: @height;
+	width: @height*1.5;
+	margin: 10px;
+}
+
+.boxcontent {
+	display: flex;
+	height: 300px;
+	width: 50%;
+	justify-content: center;
+	flex-wrap: wrap;
+	border: 1px solid white;
+	color: @color;
+}
+
+
+
+
+
+html {
+	background: @backgroundMain;
+	font-family: 'Lacquer', sans-serif;
+}
+
+nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background: black;
+
+	a {
+		display: flex;
+		padding: 10px;
+		flex-direction: column;
+		width: 100%;
+		color: @navcolor;
+		text-decoration: none;
+		justify-content: space-between;
+		.image();
+	}
+}
+
+
+.container {
+	display: flex;
+	width: @width;
+	color: @color;
+	font-size: 62.5%;
+
+		h1 {
+			justify-content: center;
+			align-content: center;
+			margin-left: 600px;
+			height: 20px;
+			font-size: 48pt;
+			@media (max-width: 500px) {
+				display: none;
+			}
+
+			}
+		.imageMain {
+			display: flex;
+			width: @width;
+			justify-content: center;
+			margin-top: 5%;
+
+		}
+		img {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-content: center;
+			width: 500px;
+			height: 300px;
+			margin-left: -800px;
+			@media (max-width: 500px) {
+				margin: auto;
+			}
+		}
+}
+
+.about {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: @color;
+	height: 300px;
+	font-size: 1.3rem;
+
+	.left{
+		.boxcontent();
+		p {
+			font-family: 'Lacquer', sans-serif;
+			font-size: 1.2rem;
+		}
+		@media (max-width: 500px) {
+			font-size: 0.8rem;
+		}
+
+	}
+
+	.right{
+	.boxcontent();
+
+		h1{
+			margin-left: 100px;
+			color: @color;
+			font-size: 1.3rem;
+
+		}
+
+	}
+
+
+	.enemies {
+		display: flex;
+		flex-direction: row;
+
+		width: 70%;
+		height: 150px;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-content: space-between;
+		margin-top: 25px;
+		margin-left: -350px;
+		.small-left {
+			.smallimage();
+			@media (max-width: 500px) {
+				display: none;
+			}
+			}
+		.small-right {
+			.smallimage();
+			@media (max-width: 500px) {
+				display: flex;
+				flex-direction: : row;
+				flex-wrap: nowrap;
+				height: 80px;
+				width: 80px;
+				margin-left: 150px;
+				margin-top: -60px;
+
+			}
+
+			}
+	}
+
+}
+
+.history {
+	display: flex;
+	margin: auto;
+	margin-top: 20px;
+	color: @color;
+	justify-content: center;
+	margin-left: -250px;
+
+	@media (max-width: 500px) {
+		height: 400px;
+		width: 400px;
+		margin-left: 2px;
+	}
+	h1 {
+		font-weight: bold;
+		margin-left: 50%;
+		color: @color;
+		font-size: 1rem;
+	}
+	table {
+		border: 3px solid black;
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		margin-left: 150px;
+
+
+
+		th {
+			border: 3px solid red;
+			width: 300px;
+			font-weight: bold;
+			color: @color  - 150
+		}
+		td {
+			border: 3px solid green;
+			color: @color  - 150
+
+		}
+	}
+}
+
+table#t01 {
+  width: 100%;
+  background-color: #f1f1c1 - 50;
+}
+
+.contact {
+	color: white;
+	margin-top: 15px;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
