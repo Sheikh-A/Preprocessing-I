@@ -311,6 +311,8 @@ nav a {
   border: 3px solid black;
   width: 100%;
   display: flex;
+  justify-content: center;
+  margin-left: 150px;
 }
 .history table th {
   border: 3px solid red;
@@ -325,4 +327,11 @@ nav a {
 table#t01 {
   width: 100%;
   background-color: #bfbf8f;
+}
+.contact {
+  color: white;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
 }
